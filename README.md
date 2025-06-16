@@ -18,12 +18,37 @@ A simple, terminal-based movie recommender built using **Python and Pandas**, wi
 
 ##  How it Works
 
-1. The program asks the user for:
-   - **Mood** (e.g., inspiring, feel-good, emotional)
-   - **Genre** (e.g., drama, comedy, sci-fi)
-   - **Preferred duration** (Short, Medium, Long)
-2. It filters a preloaded list of movies based on these inputs.
-3.  Displays a list of matching movie recommendations in the terminal.
+Load Movie Data - 
+The program loads movie information from a CSV file (movies.csv) which contains:
+
+Title,Genre,Mood,Duration,Release Year
+
+Take User Input - 
+The user is asked three simple questions:
+
+Mood → e.g., inspiring, feel-good, emotional
+
+Genre → e.g., drama, comedy, sci-fi
+
+Duration Preference → Short (<90 mins), Medium (90–120 mins), Long (>120 mins)
+
+Filter Movies - 
+Based on the inputs, the program filters the movies using simple logic (no machine learning involved) by:
+
+Matching the mood (case-insensitive)
+
+Matching the genre
+
+Categorizing duration into short, medium, or long based on runtime
+
+Show Recommendations
+
+If matches are found, a list of suitable movies is displayed.
+
+If no matches are found, it politely informs the user and ends the program.
+
+Exit - 
+The program ends after showing recommendations — clean and minimal.
 
 
 
