@@ -11,11 +11,11 @@ def load_movies(file_path):
         print("File not found.")
         return None
 
-#  Clean user input helper
+#  user input 
 def ask_input(prompt):
     return input(prompt).strip().lower()
 
-#  Get preferences from user
+#  get preferences from user
 def get_user_preferences():
     print("\n Let's find a movie for you!\n")
 
@@ -28,7 +28,7 @@ def get_user_preferences():
 
     return mood, genre, duration
 
-#  Filter and recommend movies
+#  filter and recommend movies
 def recommend_movies(df, mood, genre, duration):
     df = df[
         (df['mood'].str.lower() == mood) &
@@ -50,7 +50,7 @@ def recommend_movies(df, mood, genre, duration):
         for _, row in df.iterrows():
             print(f"🎬 {row['title']} ({row['year']}) - {row['duration']} mins")
 
-#  Main runner
+
 if __name__ == "__main__":
     movies = load_movies("data/movies.csv")
 
